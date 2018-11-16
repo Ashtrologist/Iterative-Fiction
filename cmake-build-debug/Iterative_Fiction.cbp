@@ -82,7 +82,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/display.cpp">
+			<Option target="Iterative_Fiction"/>
+		</Unit>
+		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/display.h">
+			<Option target="Iterative_Fiction"/>
+		</Unit>
 		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/main.cpp">
+			<Option target="Iterative_Fiction"/>
+		</Unit>
+		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.cpp">
+			<Option target="Iterative_Fiction"/>
+		</Unit>
+		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.h">
+			<Option target="Iterative_Fiction"/>
+		</Unit>
+		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.cpp">
+			<Option target="Iterative_Fiction"/>
+		</Unit>
+		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.h">
 			<Option target="Iterative_Fiction"/>
 		</Unit>
 		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/CMakeLists.txt">

@@ -3,4 +3,4 @@ project(Iterative_Fiction)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Iterative_Fiction main.cpp, StoryTokenizer.cpp, StoryTokenizer.h PassageTokenizer.cpp PassageTokenizer.h)
+add_executable(Iterative_Fiction main.cpp storytokenizer.cpp storytokenizer.h display.cpp display.h passagetokenizer.cpp passagetokenizer.h)

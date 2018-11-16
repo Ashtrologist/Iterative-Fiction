@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/StoryTokenizer.cpp
+StoryTokenizer.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/StoryTokenizer.h
+
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/StoryTokenizer.h
+

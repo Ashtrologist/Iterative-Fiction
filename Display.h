@@ -1,0 +1,8 @@
+//
+// Created by Ashton Rodriquez on 11/16/18.
+//
+
+#ifndef ITERATIVE_FICTION_DISPLAY_H
+#define ITERATIVE_FICTION_DISPLAY_H
+
+#endif //ITERATIVE_FICTION_DISPLAY_H
