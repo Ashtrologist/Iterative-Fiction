@@ -1,0 +1,3 @@
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir
