@@ -1,6 +1,17 @@
 #include <iostream>
+#include <fstream>
+#include <string>
+#include "display.h"
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+    Display object;
+
+    object.startProgram("if.html");
+
+
+
     return 0;
+
 }

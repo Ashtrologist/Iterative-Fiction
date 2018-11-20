@@ -8,28 +8,30 @@
 #include <string>
 #include <iostream>
 #include "passagetokenizer.h"
+#include "display.h"
 using namespace std;
 
 
 class PassageToken{
-public:
-    string getText() const;
-    PassageToken(string sentence);
+    public:
+        string getText() const;
+        PassageToken(string sentence);
 
-private:
-    string passageText;
+    private:
+        string passageText;
 
 };
 
 class StoryTokenizer{
-public:
-    bool hasNextPassage();
-    PassageToken nextPassage();
-    StoryTokenizer(string sentence);
 
-private:
-    string textSource;
-    int location = 0;
+    public:
+        bool hasNextPassage();
+        PassageToken nextPassage();
+        StoryTokenizer(string sentence);
+
+    private:
+        string textSource;
+        int location = 0;
 
 };
 

@@ -6,9 +6,49 @@
 
 #IncludeRegexTransform: 
 
-/Users/ashtonrodriquez/Documents/Iterative-Fiction/StoryTokenizer.cpp
-StoryTokenizer.h
-/Users/ashtonrodriquez/Documents/Iterative-Fiction/StoryTokenizer.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/display.cpp
+display.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/display.h
+fstream
+-
+iostream
+-
+string
+-
 
-/Users/ashtonrodriquez/Documents/Iterative-Fiction/StoryTokenizer.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/display.h
+string
+-
+iostream
+-
+vector
+-
+passagetokenizer.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.h
+storytokenizer.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.h
+
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/main.cpp
+iostream
+-
+fstream
+-
+string
+-
+display.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/display.h
+
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.h
+string
+-
+iostream
+-
+
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.h
+string
+-
+iostream
+-
+passagetokenizer.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.h
 

@@ -3,4 +3,7 @@ project(Iterative_Fiction)
 
 set(CMAKE_CXX_STANDARD 14)
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug")
+
+
 add_executable(Iterative_Fiction main.cpp storytokenizer.cpp storytokenizer.h display.cpp display.h passagetokenizer.cpp passagetokenizer.h)

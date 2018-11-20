@@ -7,6 +7,8 @@
 
 #include <string>
 #include <iostream>
+#include "display.h"
+#include "storytokenizer.h"
 using namespace std;
 
 enum command_t {LINK, GOTO, SET, IF, ELSEIF, ELSE, BLOCK, TEXT};

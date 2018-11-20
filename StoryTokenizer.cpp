@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-//Construct for the PassagToken class
+//Construct for the PassageToken class
 PassageToken::PassageToken(string sentence) {
     passageText = sentence;
 }
