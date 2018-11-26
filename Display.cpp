@@ -7,13 +7,13 @@
 #include <iostream>
 #include <string>
 
-//The purpose of this function is to open the file and read in the text input
 void Display::startProgram(string textFile) const {
 
-    fstream myFile; //Input file stream
-    string textInput, story; //Input string
+//The purpose of this part of the function is to open a file and read in the text
+    fstream myFile;
+    string textInput, story;
 
-    myFile.open(textFile); //Open the file
+    myFile.open(textFile);
 
     if(myFile.is_open()){
         getline(myFile, textInput);
@@ -25,7 +25,10 @@ void Display::startProgram(string textFile) const {
 
     myFile.close();
 
-    return textInput;
+//The purpose of this part of the function is to pass the text to the other classes
+
+    PassageTokenizer passage = new PassageTokenizer();
+    passage.getText(textInput);
 
 
 }
