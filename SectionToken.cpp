@@ -4,13 +4,17 @@ using namespace std;
 
 
 
-
-string SectionToken::getText()
+SectionToken::SectionToken(string sentence, command_t type)
 {
+	sectionText = sentence;
+	sectionType = type;
+}
+
+string SectionToken::getText() const{
+
 	return string();
 }
 
-SectionToken::SectionToken(string, command_t)
-{
-
+command_t SectionToken::getType() const{
+	return command_t();
 }
