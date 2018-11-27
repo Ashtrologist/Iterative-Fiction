@@ -20,7 +20,7 @@ using namespace std;
             string textInput = "";
             string displayText = "";
            // vector <*link> links;
-           vector <PassageToken*> Passages;
+           //vector <PassageToken*> Passages;
 
 
         public:

@@ -9,6 +9,7 @@
 #include <iostream>
 #include "display.h"
 #include "storytokenizer.h"
+
 using namespace std;
 
 enum command_t {LINK, GOTO, SET, IF, ELSEIF, ELSE, BLOCK, TEXT};
@@ -36,80 +37,80 @@ protected:
     int currLocation;
 };
 
-class Link : public SectionToken
-{
-private:
-    string passName;
-public:
-    Link(SectionToken& stok);
-    string getPassageName() const { return passageName; };
-};
-
-class Block : public SectionToken
-{
-private:
-    vector<Section*> blockSections;
-    int blockIndex;
-public:
-    Block(SectionToken& stok);
-    void addSection(Section* blockSect) const;
-};
-
-class Text : public SectionToken
-{
-public:
-    Text(SectionToken& stok);
-};
-
-class Goto : public SectionToken
-{
-private:
-    string passageName;
-public:
-    Goto(SectionToken& stok);
-    string getPassageName() const { return passageName; };
-};
-
-class Set : public SectionToken
-{
-private:
-    bool value;
-public:
-    Set(SectionToken& stok);
-    bool getValue() const { return value;};
-};
-
-class If : public SectionToken
-{
-private:
-    bool valueToCheck;
-public:
-    If(SectionToken& stok);
-    bool getValueToCheck() const { return value; };
-};
-
-class Elseif : public Section
-{
-private:
-    bool valueToCheck;
-public:
-    Elseif(SectionToken& stok);
-    bool getValueToCheck() const { return value; };
-};
-
-class Else : public SectionToken
-{
-public:
-    Else(SectionToken& stok);
-};
-
-class BlockTokenizer
-{
-public:
-    BlockTokenizer();
-    bool hasNextSection(Block& block);
-    void nextSection(Block& block);
-}
+//class Link : public SectionToken
+//{
+//private:
+//    string passageName;
+//public:
+//    Link(SectionToken& stok);
+//    string getPassageName() const { return passageName; };
+//};
+//
+//class Block : public SectionToken
+//{
+//private:
+//    vector<Section*> blockSections;
+//    int blockIndex;
+//public:
+//    Block(SectionToken& stok);
+//    void addSection(Section* blockSect) const;
+//};
+//
+//class Text : public SectionToken
+//{
+//public:
+//    Text(SectionToken& stok);
+//};
+//
+//class Goto : public SectionToken
+//{
+//private:
+//    string passageName;
+//public:
+//    Goto(SectionToken& stok);
+//    string getPassageName() const { return passageName; };
+//};
+//
+//class Set : public SectionToken
+//{
+//private:
+//    bool value;
+//public:
+//    Set(SectionToken& stok);
+//    bool getValue() const { return value;};
+//};
+//
+//class If : public SectionToken
+//{
+//private:
+//    bool valueToCheck;
+//public:
+//    If(SectionToken& stok);
+//    bool getValueToCheck() const { return value; };
+//};
+//
+//class Elseif : public SectionToken
+//{
+//private:
+//    bool valueToCheck;
+//public:
+//    Elseif(SectionToken& stok);
+//    bool getValueToCheck() const { return value; };
+//};
+//
+//class Else : public SectionToken
+//{
+//public:
+//    Else(SectionToken& stok);
+//};
+//
+//class BlockTokenizer
+//{
+//public:
+//    BlockTokenizer();
+//    bool hasNextSection(Block& block);
+//    void nextSection(Block& block);
+//};
 
 
 #endif //ITERATIVE_FICTION_PASSAGETOKENIZER_H
