@@ -9,6 +9,7 @@
 #include <iostream>
 #include "Display.h"
 #include "storytokenizer.h"
+#include <unordered_map>
 
 using namespace std;
 
@@ -52,11 +53,13 @@ public:
 //I dont understand what this is supposed to do
 class Block : public Command
 {
+	friend class BlockTockenizer;
 private:
 	vector<SectionToken*> blockSections;
 	int blockIndex;
 public:
 	Block(SectionToken& stok);
+	void startBlock(unordered_map<string, bool>& variables, vector<pair<string, string>>& listOfLinks, int gotoIndex, bool& gotoExists, string& passName);
 	void addSection(SectionToken* blockSect) const;
 };
 
@@ -154,4 +157,4 @@ public:
 	command_t getType() const;
 };
 
-//**********SUBCLASSES************//
+//**********SUBCLASSES************//
