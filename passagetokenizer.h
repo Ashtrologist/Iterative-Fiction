@@ -24,7 +24,16 @@ public:
 	SectionToken(string& section);
 };
 
+class PassageTokenizer {
+public:
+	bool hasNextSection();
+	SectionToken nextSection();
+	PassageTokenizer(string sentence);
 
+protected:
+	string text = "";
+	int currLocation;
+};
 //SUPERCLASS
 class Command {
 protected:

@@ -7,56 +7,56 @@
 #include <iostream>
 using namespace std;
 
-//PassageTokenizer::PassageTokenizer(string sentence) {
-//    text = text + sentence;
-//    currLocation = text.find(">") + 1;
-//}
-//
+PassageTokenizer::PassageTokenizer(string sentence) {
+    text = text + sentence;
+    currLocation = text.find(">") + 1;
+}
+
 //SectionToken::SectionToken(string sentence, command_t type) {
 //    sectionText = sentence;
 //    sectionType = type;
 //}
-//
-//string SectionToken::getText() const {
-//    return sectionText;
-//}
-//
+
+string SectionToken::getText() const {
+    return sectionText;
+}
+
 //command_t SectionToken::getType() const {
 //    return sectionType;
 //}
-//
-////Is there an error here? WHy am I getting an endless loop
-//bool PassageTokenizer::hasNextSection() {
-//
-//    if (text.find("(set:", currLocation) != string::npos) {
-//        return true;
-//    }
-//
-//    else if (text.find("(go-to:", currLocation) != string::npos) {
-//        return true;
-//    }
-//
-//    else if (text.find("(if:", currLocation) != string::npos) {
-//        return true;
-//    }
-//
-//    else if (text.find("(else-if:", currLocation) != string::npos) {
-//        return true;
-//    }
-//
-//    else if (text.find("(else:", currLocation) != string::npos) {
-//        return true;
-//    }
-//    else if (text.find("[[", currLocation) != string::npos) {
-//        return true;
-//    }
-//    else if (text.substr(currLocation, 1) != "<") {
-//        return true;
-//    }
-//    else {
-//        return false;
-//    }
-//}
+
+//Is there an error here? WHy am I getting an endless loop
+bool PassageTokenizer::hasNextSection() {
+
+    if (text.find("(set:", currLocation) != string::npos) {
+        return true;
+    }
+
+    else if (text.find("(go-to:", currLocation) != string::npos) {
+        return true;
+    }
+
+    else if (text.find("(if:", currLocation) != string::npos) {
+        return true;
+    }
+
+    else if (text.find("(else-if:", currLocation) != string::npos) {
+        return true;
+    }
+
+    else if (text.find("(else:", currLocation) != string::npos) {
+        return true;
+    }
+    else if (text.find("[[", currLocation) != string::npos) {
+        return true;
+    }
+    else if (text.substr(currLocation, 1) != "<") {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 //
 ////Block statements and links
 //SectionToken PassageTokenizer::nextSection() {
