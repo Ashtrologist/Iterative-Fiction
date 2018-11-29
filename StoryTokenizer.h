@@ -12,16 +12,6 @@
 using namespace std;
 
 
-class PassageToken{
-    public:
-        string getText() const;
-        PassageToken(string sentence);
-
-    private:
-        string passageText;
-
-};
-
 class StoryTokenizer{
 
     public:
@@ -33,6 +23,31 @@ class StoryTokenizer{
         string textSource;
         int location = 0;
 
+};
+
+class PassageToken{
+
+public:
+    string getText() const;
+    PassageToken(string sentence);
+
+private:
+    string passageText;
+
+};
+
+class Passage{
+    friend class PassageTokenizer;
+
+private:
+    string name;
+    vector<Section> sections;
+    int ptIndex;
+
+public:
+    Passage(PassageToken& pt);
+    string getName() const{ return name; };
+    vector<Section> getSec(){ return sections; };
 };
 
 #endif //ITERATIVE_FICTION_STORYTOKENIZER_H
