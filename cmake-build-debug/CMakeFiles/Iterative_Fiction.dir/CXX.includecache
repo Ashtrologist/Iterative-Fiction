@@ -6,9 +6,23 @@
 
 #IncludeRegexTransform: 
 
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.h
+string
+-
+iostream
+-
+vector
+-
+initializer_list
+-
+passagetokenizer.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.h
+storytokenizer.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.h
+
 /Users/ashtonrodriquez/Documents/Iterative-Fiction/display.cpp
-display.h
-/Users/ashtonrodriquez/Documents/Iterative-Fiction/display.h
+Display.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.h
 passagetokenizer.h
 /Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.h
 storytokenizer.h
@@ -20,25 +34,13 @@ iostream
 string
 -
 
-/Users/ashtonrodriquez/Documents/Iterative-Fiction/display.h
-string
--
-iostream
--
-vector
--
-passagetokenizer.h
-/Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.h
-storytokenizer.h
-/Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.h
-
 /Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.h
 string
 -
 iostream
 -
-display.h
-/Users/ashtonrodriquez/Documents/Iterative-Fiction/display.h
+Display.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.h
 storytokenizer.h
 /Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.h
 
@@ -49,6 +51,6 @@ iostream
 -
 passagetokenizer.h
 /Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.h
-display.h
-/Users/ashtonrodriquez/Documents/Iterative-Fiction/display.h
+Display.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.h
 

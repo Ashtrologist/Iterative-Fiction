@@ -7,7 +7,7 @@
 
 #include <string>
 #include <iostream>
-#include "display.h"
+#include "Display.h"
 #include "storytokenizer.h"
 
 using namespace std;

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "display.h"
+#include "Display.h"
 using namespace std;
 
 int main() {
