@@ -43,7 +43,7 @@ void Display::startProgram(string textFile) const {
         while (pt.hasNextSection()){
 
         SectionToken stok = pt.nextSection();
-        switch (stok.getType()){
+        /*switch (stok.getType()){
             case LINK:cout << "  Link:  ";
             break;
 
@@ -68,7 +68,7 @@ void Display::startProgram(string textFile) const {
 
             default:
                     cout << "  Unknown token:  ";
-        }
+        }*/
 
         cout << stok.getText() << endl;}
     }
