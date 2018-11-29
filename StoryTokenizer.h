@@ -8,7 +8,7 @@
 #include <string>
 #include <iostream>
 #include "passagetokenizer.h"
-#include "display.h"
+#include "Display.h"
 using namespace std;
 
 

@@ -2,7 +2,7 @@
 // Created by Ashton Rodriquez on 11/16/18.
 //
 
-#include "display.h"
+#include "Display.h"
 #include "passagetokenizer.h"
 #include "storytokenizer.h"
 #include <fstream>
@@ -13,7 +13,7 @@ void Display::startProgram(string textFile) const {
 
 //The purpose of this part of the function is to open a file and read in the text
     fstream myFile;
-    string textInput;
+    string textInput, name;
 
     myFile.open(textFile);
 
@@ -27,66 +27,145 @@ void Display::startProgram(string textFile) const {
 
     myFile.close();
 
-//The purpose of this part of the function is to pass the text to the other classes
-
-    StoryTokenizer str(textInput);
-
-
+    Display story (textInput);
     int pass = 0;
-    while (str.hasNextPassage()){
 
-        PassageToken ptok = str.nextPassage();
+    StoryTokenizer stoken;
+
+    while(stoken.hasNextPassage(story))
+    {
+        stoken.nextPassage(story);
+        name = story.getPassages().at(pass).getName();
+        story.addLookup(name, pass);
         pass++;
-        cout << "Passage " << pass << ":  " << endl;
-        PassageTokenizer pt(ptok.getText());
 
-        while (pt.hasNextSection()){
-
-        SectionToken stok = pt.nextSection();
-        /*switch (stok.getType()){
-            case LINK:cout << "  Link:  ";
-            break;
-
-            case SET:cout << "  Set:  ";
-            break;
-
-            case GOTO:cout << "  Go-to:  ";
-            break;
-
-            case IF:cout << "  If:  ";
-            break;
-            case ELSEIF:cout << "  Else-if:  ";
-            break;
-            case ELSE:cout << "  Else:  ";
-            break;
-
-            case BLOCK:cout << "  Block:  ";
-            break;
-
-            case TEXT:cout << "  Text:  ";
-            break;
-
-            default:
-                    cout << "  Unknown token:  ";
-        }*/
-
-        cout << stok.getText() << endl;}
     }
-   // return 0;
+
+    story.startPassage(0);
 }
-
-
-
-
 
 
 Display::Display(string textFile) {
 
-
-
-
+    displayText = textFile;
 }
 
-Display::Display() {
-
+void Display::addLookup(string &name, int &index) {
+    lookUpPassage[name] = index;
 }
+
+void Display::addVariable(string &varName, bool &value) {
+    variables[varName] = value;
+}
+
+bool Display::getVarVal(string &varName) const {
+    return variables.at(varName);
+}
+
+bool Display::lookup(string &passName) const {
+    return lookUpPassage.find(passName) -> second;
+}
+
+void Display::startPassage(int index) {
+    bool ifElseIfElse = true;
+    bool gotoExists = false;
+    int j, chosen;
+    string passName;
+
+    listOfLinks.clear();
+
+    for(int i = 0; i < passages.at(index).getSec().size(); i++)
+    {
+        if(passages.at(index).getSec().at(i).getType() == GOTO)
+        {
+            j = i;
+            gotoExists = true;
+            passName = passages.at(index).getSec().at(i).getPassName();
+            break;
+        }
+    }
+
+    if(gotoExists == false)
+    {
+        j = passages.at(index).getSec().size();
+    }
+
+    for(int i = 0; i < j; i++)
+    {
+        type_t currentType = passages.at(index).getSec().at(i).getType();
+        string currentText = passages.at(index).getSec().at(i).getText();
+
+        if(currentType == SET)
+        {
+            bool value = passages.at(index).getSec().at(i).getValue();
+            addVariable(currentText, value);
+        }
+        else if(currentType == TEXT)
+        {
+            cout << currentText << endl;
+        }
+        else if(currentType == LINK)
+        {
+            if(gotoExists == false)
+            {
+                passName = passages.at(index).getSec().at(i).getPassName();
+                cout << "\"" + currentText + "\"" << endl;
+                listOfLinks.push_back(make_pair(currentText, passName));
+            }
+        }
+        else if(currentType == IF)
+        {
+            if(passages.at(index).getSec().at(i).getValueToCheck() == getVarVal(currentText))
+            {
+                ifElseIfElse = false;
+            }
+            else
+            {
+                i++;
+            }
+        }
+        else if(currentType == ELSEIF)
+        {
+            if(passages.at(index).getSec().at(i).getValueToCheck() == getVarVal(currentText) && ifElseIfElse == true)
+            {
+                ifElseIfElse = false;
+            }
+            else
+            {
+                i++;
+            }
+        }
+        else if(currentType == ELSE)
+        {
+            if(ifElseIfElse == false)
+            {
+                i++;
+            }
+        }
+        else
+        {
+            passages.at(index).getSec().at(i).startBlock(variables, listOfLinks, j, gotoExists, passName);
+        }
+
+    }
+
+    if(listOfLinks.size() > 0)
+    {
+        for(int i = 0; i < listOfLinks.size(); i++)
+        {
+            cout << (i + 1) << ". " << listOfLinks.at(i).first << endl;
+        }
+
+        cin >> chosen;
+        chosen--;
+        passName = listOfLinks.at(chosen).second;
+
+    }
+
+    chosen = lookup(passName);
+
+    startPassage(chosen);
+}
+
+
+
