@@ -129,7 +129,7 @@ SectionToken PassageTokenizer::nextSection() {
     SectionToken stok(text.substr(tempLocation, currLocation - tempLocation), command);
     return stok;
 }
-//
+///
 ////Block statements and links
 //SectionToken PassageTokenizer::nextSection() {
 //    int tempLocation;
