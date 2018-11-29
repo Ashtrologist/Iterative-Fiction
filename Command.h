@@ -37,7 +37,7 @@ const string VARIABLE_START = "$";
 
 class SectionToken
 {
-    friend class BlockTokenizer;
+    friend class Blocks;
 protected:
     string sectionText;
 public:
@@ -72,7 +72,7 @@ public:
 
 class Block : public Command
 {
-    friend class BlockTokenizer;
+    friend class Blocks;
 private:
     vector<Command> blockCommands;
     int blIndex = 0;
@@ -130,10 +130,10 @@ public:
     Else(SectionToken& stok);
 };
 
-class BlockTokenizer
+class Blocks
 {
 public:
-    BlockTokenizer(){};
+    Blocks(){};
     bool hasNextSection(Block& bl);
     void nextSection(Block& bl);
 };

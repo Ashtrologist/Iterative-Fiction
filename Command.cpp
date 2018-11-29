@@ -87,7 +87,7 @@ Else::Else(SectionToken& stok) : Command(stok)
     type = ELSE;
 }
 
-bool BlockTokenizer::hasNextSection(Block& bl)
+bool Blocks::hasNextSection(Block& bl)
 {
     if (bl.getText().find("(set:", bl.blIndex) != string::npos) {
         return true;
@@ -115,7 +115,7 @@ bool BlockTokenizer::hasNextSection(Block& bl)
     }
 }
 
-void BlockTokenizer::nextSection(Block& bl)
+void Blocks::nextSection(Block& bl)
 {
     int sectionBeginning;
     string stokenText;
@@ -248,7 +248,7 @@ Block::Block(SectionToken& stok) : Command(stok)
 {
     type = BLOCK;
     blIndex = 2;
-    BlockTokenizer btkzr;
+    Blocks btkzr;
 
     while(btkzr.hasNextSection(*this))
     {

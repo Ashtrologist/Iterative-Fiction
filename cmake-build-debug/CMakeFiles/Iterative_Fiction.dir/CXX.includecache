@@ -18,6 +18,10 @@ vector
 string
 -
 
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.cpp
+Display.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.h
+
 /Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.h
 Passage.h
 /Users/ashtonrodriquez/Documents/Iterative-Fiction/Passage.h
@@ -29,6 +33,10 @@ string
 -
 iostream
 -
+
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/Passage.cpp
+Passage.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/Passage.h
 
 /Users/ashtonrodriquez/Documents/Iterative-Fiction/Passage.h
 Command.h
