@@ -82,25 +82,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/display.cpp">
+		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/Command.cpp">
 			<Option target="Iterative_Fiction"/>
 		</Unit>
-		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/display.h">
+		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/Command.h">
+			<Option target="Iterative_Fiction"/>
+		</Unit>
+		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.cpp">
+			<Option target="Iterative_Fiction"/>
+		</Unit>
+		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.h">
+			<Option target="Iterative_Fiction"/>
+		</Unit>
+		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/Passage.cpp">
+			<Option target="Iterative_Fiction"/>
+		</Unit>
+		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/Passage.h">
 			<Option target="Iterative_Fiction"/>
 		</Unit>
 		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/main.cpp">
-			<Option target="Iterative_Fiction"/>
-		</Unit>
-		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.cpp">
-			<Option target="Iterative_Fiction"/>
-		</Unit>
-		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.h">
-			<Option target="Iterative_Fiction"/>
-		</Unit>
-		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.cpp">
-			<Option target="Iterative_Fiction"/>
-		</Unit>
-		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.h">
 			<Option target="Iterative_Fiction"/>
 		</Unit>
 		<Unit filename="/Users/ashtonrodriquez/Documents/Iterative-Fiction/CMakeLists.txt">

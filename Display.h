@@ -5,45 +5,51 @@
 #ifndef ITERATIVE_FICTION_DISPLAY_H
 #define ITERATIVE_FICTION_DISPLAY_H
 
+#include "Passage.h"
+#include "Command.h"
+#include <fstream>
 #include <string>
 #include <iostream>
-#include <vector>
-#include <initializer_list>
-#include "passagetokenizer.h"
-#include "storytokenizer.h"
+
 using namespace std;
 
+class Display
+{
 
-    class Display {
+    friend class Command;
+    friend class Passage;
+    friend class StoryTokenizer;
 
-        friend class PassageTokenizer;
-        friend class SectionToken;
-        friend class PassageToken;
-        friend class StoryTokenizer;
+private:
+    string displayText;
+    string textFile;
+    string textInput;
+    vector<Passage> passages;
+    vector<pair<string, string>> linkList;
+    unordered_map<string, bool> variables;
+    unordered_map<string, int> findPassage;
 
-        private:
-            string textFile = "";
-            string textInput = "";
-            string displayText = "";
-            vector<pair<string, string>> listOfLinks;
-            unordered_map<string, bool> variables;
-            unordered_map<string, int> lookUpPassage;
+public:
+    Display();
+    Display(string textFile);
+    void addPassage(string& name, int& index);
+    void addVariable(string& variableName, bool& value);
+    bool getVariable(string& variableName) const;
+    int lookup(string& passName) const;
+    vector<Passage> getPassages(){ return passages; };
+    void startProgram (string textFile);
+    void startPassage(int index);
+};
 
-        public:
+class StoryTokenizer{
 
-            Display ();
-            Display (string textFile);
-            void startProgram (string textFile) const;
-            void printPassage ();
-            void printLinks ();
-//Additional functions
-        void addLookup(string& name, int& index);
-        void addVariable(string& varName, bool& value);
-        bool getVarVal(string& varName) const;
-        int lookup(string& passName) const;
-        vector<Passage> getPassages(){ return passages; };
-        void startPassage(int index);
+private:
+    int index;
 
-    };
+public:
+    StoryTokenizer() : index(0) {};
+    bool hasNextPassage(Display& theStory);
+    void nextPassage(Display& theStory);
+};
 
 #endif //ITERATIVE_FICTION_DISPLAY_H

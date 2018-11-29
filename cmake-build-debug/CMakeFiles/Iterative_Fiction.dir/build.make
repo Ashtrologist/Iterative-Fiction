@@ -70,59 +70,59 @@ CMakeFiles/Iterative_Fiction.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Iterative_Fiction.dir/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ashtonrodriquez/Documents/Iterative-Fiction/main.cpp -o CMakeFiles/Iterative_Fiction.dir/main.cpp.s
 
-CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.o: CMakeFiles/Iterative_Fiction.dir/flags.make
-CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.o: ../storytokenizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.o -c /Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.cpp
+CMakeFiles/Iterative_Fiction.dir/Passage.cpp.o: CMakeFiles/Iterative_Fiction.dir/flags.make
+CMakeFiles/Iterative_Fiction.dir/Passage.cpp.o: ../Passage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Iterative_Fiction.dir/Passage.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Iterative_Fiction.dir/Passage.cpp.o -c /Users/ashtonrodriquez/Documents/Iterative-Fiction/Passage.cpp
 
-CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.cpp > CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.i
+CMakeFiles/Iterative_Fiction.dir/Passage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Iterative_Fiction.dir/Passage.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ashtonrodriquez/Documents/Iterative-Fiction/Passage.cpp > CMakeFiles/Iterative_Fiction.dir/Passage.cpp.i
 
-CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.cpp -o CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.s
+CMakeFiles/Iterative_Fiction.dir/Passage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Iterative_Fiction.dir/Passage.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ashtonrodriquez/Documents/Iterative-Fiction/Passage.cpp -o CMakeFiles/Iterative_Fiction.dir/Passage.cpp.s
 
-CMakeFiles/Iterative_Fiction.dir/display.cpp.o: CMakeFiles/Iterative_Fiction.dir/flags.make
-CMakeFiles/Iterative_Fiction.dir/display.cpp.o: ../display.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Iterative_Fiction.dir/display.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Iterative_Fiction.dir/display.cpp.o -c /Users/ashtonrodriquez/Documents/Iterative-Fiction/display.cpp
+CMakeFiles/Iterative_Fiction.dir/Command.cpp.o: CMakeFiles/Iterative_Fiction.dir/flags.make
+CMakeFiles/Iterative_Fiction.dir/Command.cpp.o: ../Command.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Iterative_Fiction.dir/Command.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Iterative_Fiction.dir/Command.cpp.o -c /Users/ashtonrodriquez/Documents/Iterative-Fiction/Command.cpp
 
-CMakeFiles/Iterative_Fiction.dir/display.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Iterative_Fiction.dir/display.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ashtonrodriquez/Documents/Iterative-Fiction/display.cpp > CMakeFiles/Iterative_Fiction.dir/display.cpp.i
+CMakeFiles/Iterative_Fiction.dir/Command.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Iterative_Fiction.dir/Command.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ashtonrodriquez/Documents/Iterative-Fiction/Command.cpp > CMakeFiles/Iterative_Fiction.dir/Command.cpp.i
 
-CMakeFiles/Iterative_Fiction.dir/display.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Iterative_Fiction.dir/display.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ashtonrodriquez/Documents/Iterative-Fiction/display.cpp -o CMakeFiles/Iterative_Fiction.dir/display.cpp.s
+CMakeFiles/Iterative_Fiction.dir/Command.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Iterative_Fiction.dir/Command.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ashtonrodriquez/Documents/Iterative-Fiction/Command.cpp -o CMakeFiles/Iterative_Fiction.dir/Command.cpp.s
 
-CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.o: CMakeFiles/Iterative_Fiction.dir/flags.make
-CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.o: ../passagetokenizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.o -c /Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.cpp
+CMakeFiles/Iterative_Fiction.dir/Display.cpp.o: CMakeFiles/Iterative_Fiction.dir/flags.make
+CMakeFiles/Iterative_Fiction.dir/Display.cpp.o: ../Display.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Iterative_Fiction.dir/Display.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Iterative_Fiction.dir/Display.cpp.o -c /Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.cpp
 
-CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.cpp > CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.i
+CMakeFiles/Iterative_Fiction.dir/Display.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Iterative_Fiction.dir/Display.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.cpp > CMakeFiles/Iterative_Fiction.dir/Display.cpp.i
 
-CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.cpp -o CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.s
+CMakeFiles/Iterative_Fiction.dir/Display.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Iterative_Fiction.dir/Display.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.cpp -o CMakeFiles/Iterative_Fiction.dir/Display.cpp.s
 
 # Object files for target Iterative_Fiction
 Iterative_Fiction_OBJECTS = \
 "CMakeFiles/Iterative_Fiction.dir/main.cpp.o" \
-"CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.o" \
-"CMakeFiles/Iterative_Fiction.dir/display.cpp.o" \
-"CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.o"
+"CMakeFiles/Iterative_Fiction.dir/Passage.cpp.o" \
+"CMakeFiles/Iterative_Fiction.dir/Command.cpp.o" \
+"CMakeFiles/Iterative_Fiction.dir/Display.cpp.o"
 
 # External object files for target Iterative_Fiction
 Iterative_Fiction_EXTERNAL_OBJECTS =
 
 Iterative_Fiction: CMakeFiles/Iterative_Fiction.dir/main.cpp.o
-Iterative_Fiction: CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.o
-Iterative_Fiction: CMakeFiles/Iterative_Fiction.dir/display.cpp.o
-Iterative_Fiction: CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.o
+Iterative_Fiction: CMakeFiles/Iterative_Fiction.dir/Passage.cpp.o
+Iterative_Fiction: CMakeFiles/Iterative_Fiction.dir/Command.cpp.o
+Iterative_Fiction: CMakeFiles/Iterative_Fiction.dir/Display.cpp.o
 Iterative_Fiction: CMakeFiles/Iterative_Fiction.dir/build.make
 Iterative_Fiction: CMakeFiles/Iterative_Fiction.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Iterative_Fiction"

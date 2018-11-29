@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/ashtonrodriquez/Documents/Iterative-Fiction/display.cpp" "/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir/display.cpp.o"
+  "/Users/ashtonrodriquez/Documents/Iterative-Fiction/Command.cpp" "/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir/Command.cpp.o"
+  "/Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.cpp" "/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir/Display.cpp.o"
+  "/Users/ashtonrodriquez/Documents/Iterative-Fiction/Passage.cpp" "/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir/Passage.cpp.o"
   "/Users/ashtonrodriquez/Documents/Iterative-Fiction/main.cpp" "/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir/main.cpp.o"
-  "/Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.cpp" "/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.o"
-  "/Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.cpp" "/Users/ashtonrodriquez/Documents/Iterative-Fiction/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

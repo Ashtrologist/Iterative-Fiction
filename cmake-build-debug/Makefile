@@ -123,32 +123,86 @@ Iterative_Fiction/fast:
 	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/build
 .PHONY : Iterative_Fiction/fast
 
-display.o: display.cpp.o
+Command.o: Command.cpp.o
 
-.PHONY : display.o
+.PHONY : Command.o
 
 # target to build an object file
-display.cpp.o:
-	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/display.cpp.o
-.PHONY : display.cpp.o
+Command.cpp.o:
+	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/Command.cpp.o
+.PHONY : Command.cpp.o
 
-display.i: display.cpp.i
+Command.i: Command.cpp.i
 
-.PHONY : display.i
+.PHONY : Command.i
 
 # target to preprocess a source file
-display.cpp.i:
-	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/display.cpp.i
-.PHONY : display.cpp.i
+Command.cpp.i:
+	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/Command.cpp.i
+.PHONY : Command.cpp.i
 
-display.s: display.cpp.s
+Command.s: Command.cpp.s
 
-.PHONY : display.s
+.PHONY : Command.s
 
 # target to generate assembly for a file
-display.cpp.s:
-	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/display.cpp.s
-.PHONY : display.cpp.s
+Command.cpp.s:
+	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/Command.cpp.s
+.PHONY : Command.cpp.s
+
+Display.o: Display.cpp.o
+
+.PHONY : Display.o
+
+# target to build an object file
+Display.cpp.o:
+	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/Display.cpp.o
+.PHONY : Display.cpp.o
+
+Display.i: Display.cpp.i
+
+.PHONY : Display.i
+
+# target to preprocess a source file
+Display.cpp.i:
+	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/Display.cpp.i
+.PHONY : Display.cpp.i
+
+Display.s: Display.cpp.s
+
+.PHONY : Display.s
+
+# target to generate assembly for a file
+Display.cpp.s:
+	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/Display.cpp.s
+.PHONY : Display.cpp.s
+
+Passage.o: Passage.cpp.o
+
+.PHONY : Passage.o
+
+# target to build an object file
+Passage.cpp.o:
+	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/Passage.cpp.o
+.PHONY : Passage.cpp.o
+
+Passage.i: Passage.cpp.i
+
+.PHONY : Passage.i
+
+# target to preprocess a source file
+Passage.cpp.i:
+	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/Passage.cpp.i
+.PHONY : Passage.cpp.i
+
+Passage.s: Passage.cpp.s
+
+.PHONY : Passage.s
+
+# target to generate assembly for a file
+Passage.cpp.s:
+	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/Passage.cpp.s
+.PHONY : Passage.cpp.s
 
 main.o: main.cpp.o
 
@@ -177,60 +231,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-passagetokenizer.o: passagetokenizer.cpp.o
-
-.PHONY : passagetokenizer.o
-
-# target to build an object file
-passagetokenizer.cpp.o:
-	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.o
-.PHONY : passagetokenizer.cpp.o
-
-passagetokenizer.i: passagetokenizer.cpp.i
-
-.PHONY : passagetokenizer.i
-
-# target to preprocess a source file
-passagetokenizer.cpp.i:
-	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.i
-.PHONY : passagetokenizer.cpp.i
-
-passagetokenizer.s: passagetokenizer.cpp.s
-
-.PHONY : passagetokenizer.s
-
-# target to generate assembly for a file
-passagetokenizer.cpp.s:
-	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.s
-.PHONY : passagetokenizer.cpp.s
-
-storytokenizer.o: storytokenizer.cpp.o
-
-.PHONY : storytokenizer.o
-
-# target to build an object file
-storytokenizer.cpp.o:
-	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.o
-.PHONY : storytokenizer.cpp.o
-
-storytokenizer.i: storytokenizer.cpp.i
-
-.PHONY : storytokenizer.i
-
-# target to preprocess a source file
-storytokenizer.cpp.i:
-	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.i
-.PHONY : storytokenizer.cpp.i
-
-storytokenizer.s: storytokenizer.cpp.s
-
-.PHONY : storytokenizer.s
-
-# target to generate assembly for a file
-storytokenizer.cpp.s:
-	$(MAKE) -f CMakeFiles/Iterative_Fiction.dir/build.make CMakeFiles/Iterative_Fiction.dir/storytokenizer.cpp.s
-.PHONY : storytokenizer.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -240,18 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Iterative_Fiction"
-	@echo "... display.o"
-	@echo "... display.i"
-	@echo "... display.s"
+	@echo "... Command.o"
+	@echo "... Command.i"
+	@echo "... Command.s"
+	@echo "... Display.o"
+	@echo "... Display.i"
+	@echo "... Display.s"
+	@echo "... Passage.o"
+	@echo "... Passage.i"
+	@echo "... Passage.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... passagetokenizer.o"
-	@echo "... passagetokenizer.i"
-	@echo "... passagetokenizer.s"
-	@echo "... storytokenizer.o"
-	@echo "... storytokenizer.i"
-	@echo "... storytokenizer.s"
 .PHONY : help
 
 

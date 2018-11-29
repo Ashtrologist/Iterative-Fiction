@@ -1,103 +1,135 @@
 //
-// Created by Ashton Rodriquez on 11/16/18.
+// Created by Ashton Rodriquez on 11/26/18.
 //
 
 #include "Display.h"
-#include "passagetokenizer.h"
-#include "storytokenizer.h"
-#include <fstream>
-#include <iostream>
-#include <string>
 
-void Display::startProgram(string textFile) const {
+void Display::startProgram(string textFile) {
+// The purpose of this part of the function is to open a file and read in the text
+    string input, textInput, name;
 
-//The purpose of this part of the function is to open a file and read in the text
-    fstream myFile;
-    string textInput, name;
-
+    ifstream myFile;
     myFile.open(textFile);
 
-    if(myFile.is_open()){
+    getline(myFile, textInput);
+    while (myFile && textInput != "</html>")
+    {
+        input = input + textInput + '\n';
+        // cout << input;
         getline(myFile, textInput);
-        while (myFile && textInput != "</html"){
-            cout << textInput << endl; //Remember to move
-            getline(myFile, textInput);
-        }
     }
 
     myFile.close();
 
-    Display story (textInput);
-    int pass = 0;
+//This part of the function acts as the interpreter, running the entire code
+    Display st(input);
+    int count = 0;
 
-    StoryTokenizer stoken;
+    StoryTokenizer storyTok;
 
-    while(stoken.hasNextPassage(story))
+    while(storyTok.hasNextPassage(st))
     {
-        stoken.nextPassage(story);
-        name = story.getPassages().at(pass).getName();
-        story.addLookup(name, pass);
-        pass++;
-
+        storyTok.nextPassage(st);
+        name = st.getPassages().at(count).getName();
+        st.addPassage(name, count);
+        count++;
     }
 
-    story.startPassage(0);
+    st.startPassage(0);
+
+}
+
+//Having weird problems running code, moved StoryTokenizer into display file as well
+
+bool StoryTokenizer::hasNextPassage(Display& theStory)
+{
+    return theStory.displayText.find("<tw-passagedata ", index) != string::npos;
+}
+
+void StoryTokenizer::nextPassage(Display& theStory)
+{
+    int passageBeginning;
+
+    passageBeginning = theStory.displayText.find("<tw-passagedata ", index);
+    index = theStory.displayText.find("</tw-passagedata>", passageBeginning) + 17;
+
+    PassageToken ptok(theStory.displayText.substr(passageBeginning, index - passageBeginning));
+    Passage p(ptok);
+
+    theStory.passages.push_back(p);
 }
 
 
-Display::Display(string textFile) {
 
-    displayText = textFile;
+Display::Display(string text)
+{
+    displayText = text;
 }
 
-void Display::addLookup(string &name, int &index) {
-    lookUpPassage[name] = index;
+
+
+void Display::addPassage(string& name, int& index)
+{
+    findPassage[name] = index;
 }
 
-void Display::addVariable(string &varName, bool &value) {
-    variables[varName] = value;
+
+
+void Display::addVariable(string& variableName, bool& value)
+{
+    variables[variableName] = value;
 }
 
-bool Display::getVarVal(string &varName) const {
-    return variables.at(varName);
+
+
+bool Display::getVariable(string& variableName) const
+{
+    return variables.at(variableName);
 }
 
-bool Display::lookup(string &passName) const {
-    return lookUpPassage.find(passName) -> second;
+
+
+int Display::lookup(string& passName) const
+{
+    return findPassage.find(passName)->second;
 }
 
-void Display::startPassage(int index) {
+
+
+void Display::startPassage(int index)
+{
     bool ifElseIfElse = true;
     bool gotoExists = false;
-    int j, chosen;
-    string passName;
+    int j;
+    int chosen;
+    string passageName;
 
-    listOfLinks.clear();
+    linkList.clear();
 
-    for(int i = 0; i < passages.at(index).getSec().size(); i++)
+    for(int i = 0; i < passages.at(index).getCommand().size(); i++)
     {
-        if(passages.at(index).getSec().at(i).getType() == GOTO)
+        if(passages.at(index).getCommand().at(i).getType() == GOTO)
         {
             j = i;
             gotoExists = true;
-            passName = passages.at(index).getSec().at(i).getPassName();
+            passageName = passages.at(index).getCommand().at(i).getPassName();
             break;
         }
     }
 
     if(gotoExists == false)
     {
-        j = passages.at(index).getSec().size();
+        j = passages.at(index).getCommand().size();
     }
 
     for(int i = 0; i < j; i++)
     {
-        type_t currentType = passages.at(index).getSec().at(i).getType();
-        string currentText = passages.at(index).getSec().at(i).getText();
+        command_t currentType = passages.at(index).getCommand().at(i).getType();
+        string currentText = passages.at(index).getCommand().at(i).getText();
 
         if(currentType == SET)
         {
-            bool value = passages.at(index).getSec().at(i).getValue();
+            bool value = passages.at(index).getCommand().at(i).getValue();
             addVariable(currentText, value);
         }
         else if(currentType == TEXT)
@@ -108,14 +140,14 @@ void Display::startPassage(int index) {
         {
             if(gotoExists == false)
             {
-                passName = passages.at(index).getSec().at(i).getPassName();
+                passageName = passages.at(index).getCommand().at(i).getPassName();
                 cout << "\"" + currentText + "\"" << endl;
-                listOfLinks.push_back(make_pair(currentText, passName));
+                linkList.push_back(make_pair(currentText, passageName));
             }
         }
         else if(currentType == IF)
         {
-            if(passages.at(index).getSec().at(i).getValueToCheck() == getVarVal(currentText))
+            if(passages.at(index).getCommand().at(i).getValueToCheck() == getVariable(currentText))
             {
                 ifElseIfElse = false;
             }
@@ -126,7 +158,7 @@ void Display::startPassage(int index) {
         }
         else if(currentType == ELSEIF)
         {
-            if(passages.at(index).getSec().at(i).getValueToCheck() == getVarVal(currentText) && ifElseIfElse == true)
+            if(passages.at(index).getCommand().at(i).getValueToCheck() == getVariable(currentText) && ifElseIfElse == true)
             {
                 ifElseIfElse = false;
             }
@@ -144,28 +176,26 @@ void Display::startPassage(int index) {
         }
         else
         {
-            passages.at(index).getSec().at(i).startBlock(variables, listOfLinks, j, gotoExists, passName);
+            passages.at(index).getCommand().at(i).startBlock(variables, linkList, j, gotoExists, passageName);
         }
 
     }
 
-    if(listOfLinks.size() > 0)
+    if(linkList.size() > 0)
     {
-        for(int i = 0; i < listOfLinks.size(); i++)
+        for(int i = 0; i < linkList.size(); i++)
         {
-            cout << (i + 1) << ". " << listOfLinks.at(i).first << endl;
+            cout << (i + 1) << ". " << linkList.at(i).first << endl;
         }
 
         cin >> chosen;
         chosen--;
-        passName = listOfLinks.at(chosen).second;
+        passageName = linkList.at(chosen).second;
 
     }
 
-    chosen = lookup(passName);
+    chosen = lookup(passageName);
 
     startPassage(chosen);
 }
-
-
 
