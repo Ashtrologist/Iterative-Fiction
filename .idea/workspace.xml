@@ -13,9 +13,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6c23a2b4-3b94-40f1-9ecd-78f2f552bb00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SectionToken.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SectionToken.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Display.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Display.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Display.h" beforeDir="false" afterPath="$PROJECT_DIR$/Display.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoryTokenizer.h" beforeDir="false" afterPath="$PROJECT_DIR$/StoryTokenizer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir/StoryTokenizer.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir/display.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Iterative_Fiction.dir/passagetokenizer.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Iterative_Fiction" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Iterative_Fiction" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/passagetokenizer.h" beforeDir="false" afterPath="$PROJECT_DIR$/passagetokenizer.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -43,10 +49,9 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cmake" value="1" />
-          <entry key="cpp" value="23" />
-          <entry key="h" value="26" />
+          <entry key="cpp" value="21" />
+          <entry key="h" value="23" />
           <entry key="html" value="2" />
-          <entry key="iosfwd" value="1" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -54,20 +59,20 @@
         <counts>
           <entry key="CMakeLists.txt" value="2" />
           <entry key="HTML" value="2" />
-          <entry key="ObjectiveC" value="50" />
+          <entry key="ObjectiveC" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="2435" />
-          <entry key="h" value="939" />
+          <entry key="cpp" value="2411" />
+          <entry key="h" value="930" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="16" />
-          <entry key="ObjectiveC" value="3374" />
+          <entry key="ObjectiveC" value="3341" />
         </counts>
       </usages-collector>
     </session>
@@ -77,38 +82,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Display.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-268">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/passagetokenizer.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
-              <caret line="128" column="24" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/passagetokenizer.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="403">
+              <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
               <folding>
-                <element signature="e#142#159#0" expanded="true" />
+                <element signature="e#124#141#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Display.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1403">
-              <caret line="94" column="10" selection-start-line="94" selection-start-column="10" selection-end-line="94" selection-end-column="10" />
+            <state relative-caret-position="298">
+              <caret line="65" column="50" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
               <folding>
                 <element signature="e#51#71#0" expanded="true" />
               </folding>
@@ -133,9 +120,9 @@
         <option value="$PROJECT_DIR$/display.h" />
         <option value="$PROJECT_DIR$/Display.h" />
         <option value="$PROJECT_DIR$/storytokenizer.h" />
+        <option value="$PROJECT_DIR$/passagetokenizer.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Display.cpp" />
-        <option value="$PROJECT_DIR$/passagetokenizer.h" />
       </list>
     </option>
   </component>
@@ -228,12 +215,12 @@
       <workItem from="1543273168126" duration="3194000" />
       <workItem from="1543327682978" duration="541000" />
       <workItem from="1543369912718" duration="105000" />
-      <workItem from="1543445461468" duration="5155000" />
+      <workItem from="1543445461468" duration="3303000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23554000" />
+    <option name="totallyTimeSpent" value="21702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="0" />
@@ -289,6 +276,22 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/passagetokenizer.h</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Display.h</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
     <entry file="file://$PROJECT_DIR$/if .html" />
@@ -306,6 +309,10 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SectionToken.cpp" />
+    <entry file="file://$PROJECT_DIR$/SectionToken.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/storytokenizer.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2">
@@ -316,10 +323,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/passagetokenizer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="242" lean-forward="true" selection-start-line="242" selection-end-line="242" />
+          <folding>
+            <element signature="e#51#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/passagetokenizer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -332,61 +356,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Display.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-268">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        <state relative-caret-position="403">
+          <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+          <folding>
+            <element signature="e#124#141#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Display.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1403">
-          <caret line="94" column="10" selection-start-line="94" selection-start-column="10" selection-end-line="94" selection-end-column="10" />
+        <state relative-caret-position="298">
+          <caret line="65" column="50" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
           <folding>
             <element signature="e#51#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/iosfwd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="193" column="64" selection-start-line="193" selection-start-column="64" selection-end-line="193" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SectionToken.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding>
-            <element signature="e#83#102#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SectionToken.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/passagetokenizer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="128" column="24" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/passagetokenizer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding>
-            <element signature="e#142#159#0" expanded="true" />
           </folding>
         </state>
       </provider>

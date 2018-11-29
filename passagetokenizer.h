@@ -118,5 +118,40 @@ public:
 };//
 #endif //ITERATIVE_FICTION_PASSAGETOKENIZER_H
 
+enum command_t { NULLT, LINK, GOTO, SET, IF, ELSEIF, ELSE, BLOCK, TEXT };
 
-//**********SUBCLASSES************//
+class SectionToken
+{
+protected:
+	string sectionText;
+
+public:
+	string getText() const;
+	SectionToken(string& section);
+};
+
+class PassageTokenizer {
+public:
+	bool hasNextSection();
+	SectionToken nextSection();
+	PassageTokenizer(string sentence);
+
+protected:
+	string text = "";
+	int currLocation;
+};
+//SUPERCLASS
+class Command {
+protected:
+	string text;
+	command_t type;
+	int location;
+
+public:
+	Command();
+	Command(SectionToken& st);
+	string getText() const;
+	command_t getType() const;
+};
+
+//**********SUBCLASSES************//
