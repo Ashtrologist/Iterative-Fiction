@@ -308,126 +308,127 @@ void BlockTokenizer::nextSection(Block& block)
 	while (bl.getText().substr(bl.blIndex, 1) == "\n")
 	{
 		bl.blIndex++;
-	
 
 
-	//test to see if the next section is a Text Section.
-	if ((bl.getText().substr(bl.blIndex, 1) != "(") && (bl.getText().substr(bl.blIndex, 1) != BLOCK_START))
-	{
-		sectionBeginning = bl.blIndex;
 
-
-		if ((bl.getText().find("(", bl.blIndex) == string::npos) && (bl.getText().find(BLOCK_START, bl.blIndex) == string::npos))
+		//test to see if the next section is a Text Section.
+		if ((bl.getText().substr(bl.blIndex, 1) != "(") && (bl.getText().substr(bl.blIndex, 1) != "["))
 		{
-			bl.blIndex = bl.getText().find("]", bl.blIndex);
+			sectionBeginning = bl.blIndex;
+
+
+			if ((bl.getText().find("(", bl.blIndex) == string::npos) && (bl.getText().find("[", bl.blIndex) == string::npos))
+			{
+				bl.blIndex = bl.getText().find("]", bl.blIndex);
+			}
+			else if (bl.getText().find("(", bl.blIndex) < bl.getText().find("[", bl.blIndex))
+			{
+				bl.blIndex = bl.getText().find("(", bl.blIndex);
+			}
+			else
+			{
+				bl.blIndex = bl.getText().find("[", bl.blIndex);
+			}
+			stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
+			SectionToken stok(stokenText);
+			Text text(stok);
+			bl.addSection(text);
 		}
-		else if (bl.getText().find("(", bl.blIndex) < bl.getText().find(BLOCK_START, bl.blIndex))
+		else if (bl.getText().substr(bl.blIndex, 3) == "[[[")
 		{
-			bl.blIndex = bl.getText().find("(", bl.blIndex);
+			int counter = 1;
+			sectionBeginning = bl.blIndex;
+			bl.blIndex++;
+			while (counter != 0) {
+				if (bl.getText().at(bl.blIndex) == '[') {
+					counter++;
+				}
+				if (bl.getText().at(bl.blIndex) == ']') {
+					counter--;
+				}
+				bl.blIndex++;
+			}
+			stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
+			SectionToken stok(stokenText);
+			Block block(stok);
+			bl.addSection(block);
+		}
+		else if (bl.getText().substr(bl.blIndex, 5) == "(set:")
+		{
+			sectionBeginning = bl.getText().find("(set:", bl.blIndex);
+			bl.blIndex = bl.getText().find(")", sectionBeginning) + 1;
+			stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
+			SectionToken stok(stokenText);
+			Set set(stok);
+			bl.addSection(set);
+		}
+		else if (bl.getText().substr(bl.blIndex, 7) == "(go-to:")
+		{
+			sectionBeginning = bl.getText().find("(go-to:", bl.blIndex);
+			bl.blIndex = bl.getText().find(")", sectionBeginning) + 1;
+			stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
+			SectionToken stok(stokenText);
+			Goto go_to(stok);
+			bl.addSection(go_to);
+		}
+		else if (bl.getText().substr(bl.blIndex, 4) == "(if:")
+		{
+			sectionBeginning = bl.getText().find("(if:", bl.blIndex);
+			bl.blIndex = bl.getText().find(")", sectionBeginning) + 1;
+			stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
+			SectionToken stok(stokenText);
+			If ifSec(stok);
+			bl.addSection(ifSec);
+		}
+		else if (bl.getText().substr(bl.blIndex, 9) == "(else-if:")
+		{
+			sectionBeginning = bl.getText().find("(else-if:", bl.blIndex);
+			bl.blIndex = bl.getText().find(")", sectionBeginning) + 1;
+			stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
+			SectionToken stok(stokenText);
+			Elseif elseif(stok);
+			bl.addSection(elseif);
+		}
+		else if (bl.getText().substr(bl.blIndex, 6) == "(else:")
+		{
+			sectionBeginning = bl.getText().find("(else:", bl.blIndex);
+			bl.blIndex = bl.getText().find(")", sectionBeginning) + 1;
+			stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
+			SectionToken stok(stokenText);
+			Else el(stok);
+			bl.addSection(el);
+		}
+		else if (bl.getText().substr(bl.blIndex, 2) == "[[")
+		{
+			sectionBeginning = bl.getText().find("[[", bl.blIndex);
+			bl.blIndex = bl.getText().find("]]", sectionBeginning) + 2;
+			stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
+			SectionToken stok(stokenText);
+			Link link(stok);
+			bl.addSection(link);
 		}
 		else
 		{
-			bl.blIndex = bl.getText().find(BLOCK_START, bl.blIndex);
-		}
-		stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
-		SectionToken stok(stokenText);
-		Text text(stok);
-		bl.addSection(text);
-	}
-	else if (bl.getText().substr(bl.blIndex, 3) == "[[[")
-	{
-		int counter = 1;
-		sectionBeginning = bl.blIndex;
-		bl.blIndex++;
-		while (counter != 0) {
-			if (bl.getText().at(bl.blIndex) == '[') {
-				counter++;
-			}
-			if (bl.getText().at(bl.blIndex) == ']') {
-				counter--;
-			}
+			int counter = 1;
+			sectionBeginning = bl.blIndex;
 			bl.blIndex++;
-		}
-		stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
-		SectionToken stok(stokenText);
-		Block block(stok);
-		bl.addSection(block);
-	}
-	else if (bl.getText().substr(bl.blIndex, 5) == "(set:")
-	{
-		sectionBeginning = bl.getText().find("(set:", bl.blIndex);
-		bl.blIndex = bl.getText().find(")", sectionBeginning) + 1;
-		stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
-		SectionToken stok(stokenText);
-		Set set(stok);
-		bl.addSection(set);
-	}
-	else if (bl.getText().substr(bl.blIndex, 7) == "(go-to:")
-	{
-		sectionBeginning = bl.getText().find("(go-to:", bl.blIndex);
-		bl.blIndex = bl.getText().find(")", sectionBeginning) + 1;
-		stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
-		SectionToken stok(stokenText);
-		Goto go_to(stok);
-		bl.addSection(go_to);
-	}
-	else if (bl.getText().substr(bl.blIndex, 4) == "(if:")
-	{
-		sectionBeginning = bl.getText().find("(if:", bl.blIndex);
-		bl.blIndex = bl.getText().find(")", sectionBeginning) + 1;
-		stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
-		SectionToken stok(stokenText);
-		If ifSec(stok);
-		bl.addSection(ifSec);
-	}
-	else if (bl.getText().substr(bl.blIndex, 9) == "(else-if:")
-	{
-		sectionBeginning = bl.getText().find("(else-if:", bl.blIndex);
-		bl.blIndex = bl.getText().find(")", sectionBeginning) + 1;
-		stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
-		SectionToken stok(stokenText);
-		Elseif elseif(stok);
-		bl.addSection(elseif);
-	}
-	else if (bl.getText().substr(bl.blIndex, 6) == "(else:")
-	{
-		sectionBeginning = bl.getText().find("(else:", bl.blIndex);
-		bl.blIndex = bl.getText().find(")", sectionBeginning) + 1;
-		stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
-		SectionToken stok(stokenText);
-		Else el(stok);
-		bl.addSection(el);
-	}
-	else if (bl.getText().substr(bl.blIndex, 2) == "[[")
-	{
-		sectionBeginning = bl.getText().find("[[", bl.blIndex);
-		bl.blIndex = bl.getText().find("]]", sectionBeginning) + 2;
-		stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
-		SectionToken stok(stokenText);
-		Link link(stok);
-		bl.addSection(link);
-	}
-	else
-	{
-		int counter = 1;
-		sectionBeginning = bl.blIndex;
-		bl.blIndex++;
-		while (counter != 0)
-		{
-			if (bl.getText().at(bl.blIndex) == '[')
+			while (counter != 0)
 			{
-				counter++;
+				if (bl.getText().at(bl.blIndex) == '[')
+				{
+					counter++;
+				}
+				if (bl.getText().at(bl.blIndex) == ']')
+				{
+					counter--;
+				}
+				bl.blIndex++;
 			}
-			if (bl.getText().at(bl.blIndex) == ']')
-			{
-				counter--;
-			}
-			bl.blIndex++;
+			stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
+			SectionToken stok(stokenText);
+			Block block(stok);
+			bl.addSection(block);
 		}
-		stokenText = bl.getText().substr(sectionBeginning, bl.blIndex - sectionBeginning);
-		SectionToken stok(stokenText);
-		Block block(stok);
-		bl.addSection(block);
 	}
 }
 
@@ -477,7 +478,7 @@ void Block::startBlock(unordered_map<string, bool>& variables, vector<pair<strin
 		}
 		else if (currentType == TEXT)
 		{
-			cout << currentText << endl; // @suppress("Invalid overload")
+			cout << currentText << endl;
 		}
 		else if (currentType == LINK)
 		{
@@ -485,11 +486,11 @@ void Block::startBlock(unordered_map<string, bool>& variables, vector<pair<strin
 			{
 				passName = blockSections.at(i).getPassName();
 
-				cout << "\"" + currentText + "\"" << endl; // @suppress("Invalid overload")
+				cout << "\"" + currentText + "\"" << endl;
 				listOfLinks.push_back(make_pair(currentText, passName));
 			}
 		}
-		else if (currentType == IF)
+		else if(currentType == IF)
 		{
 			if (blockSections.at(i).getValueToCheck() == variables[currentText])
 			{
@@ -522,7 +523,10 @@ void Block::startBlock(unordered_map<string, bool>& variables, vector<pair<strin
 		{
 			blockSections.at(i).startBlock(variables, listOfLinks, gotoIndex, gotoExists, passName);
 		}
+	}
 }
+
+
 
 void Block::addSection(SectionToken * blockSect) const
 {

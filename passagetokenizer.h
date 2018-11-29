@@ -38,6 +38,7 @@ public:
 	Command(SectionToken& st);
 	string getText() const;
 	command_t getType() const;
+	virtual void startBlock(unordered_map<string, bool>& lookUpPassage, vector<pair<string, string>>& listOfLinks, int gotoIndex, bool& gotoExists, string& passName) {};
 };
 
 //**********SUBCLASSES************//
@@ -50,7 +51,7 @@ public:
 	string getPassageName() const;
 };
 
-//I dont understand what this is supposed to do
+//
 class Block : public Command
 {
 	friend class BlockTockenizer;
