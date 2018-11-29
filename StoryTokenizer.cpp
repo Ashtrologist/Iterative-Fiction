@@ -58,4 +58,25 @@ PassageToken StoryTokenizer::nextPassage() {
 
 }
 
+Passage::Passage(PassageToken &pt) {
+
+    ptIndex = 0;
+
+    int passageNameBeginning = pt.getText().find("name=", ptIndex) + 6;
+    ptIndex = pt.getText().find("\"", passageNameBeginning);
+
+    name = pt.getText().substr(passageNameBeginning, ptIndex - passageNameBeginning);
+
+    string passageText = pt.getText();
+    PassageTokenizer ptkzr(passageText, *this);
+
+    while(ptkzr.hasNextSection(*this))
+    {
+        //infinite loop
+        ptkzr.nextSection(*this);
+    }
+
+
+}
+
 
