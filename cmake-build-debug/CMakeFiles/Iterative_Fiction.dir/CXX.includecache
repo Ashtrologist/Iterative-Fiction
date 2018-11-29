@@ -34,6 +34,24 @@ iostream
 string
 -
 
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/main.cpp
+iostream
+-
+fstream
+-
+string
+-
+Display.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.h
+
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.cpp
+passagetokenizer.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.h
+string
+-
+iostream
+-
+
 /Users/ashtonrodriquez/Documents/Iterative-Fiction/passagetokenizer.h
 string
 -
@@ -43,6 +61,14 @@ Display.h
 /Users/ashtonrodriquez/Documents/Iterative-Fiction/Display.h
 storytokenizer.h
 /Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.h
+
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.cpp
+storytokenizer.h
+/Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.h
+string
+-
+iostream
+-
 
 /Users/ashtonrodriquez/Documents/Iterative-Fiction/storytokenizer.h
 string
